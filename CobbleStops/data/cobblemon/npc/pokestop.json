@@ -1,0 +1,30 @@
+{
+    "resourceIdentifier": "cobblemon:pokestop",
+    "canDespawn": false,
+    "isMovable": false,
+    "isInvulnerable": true,
+    "isLeashable": false,
+    "allowProjectileHits": false,
+    "hideNameTag": true,
+    "hitbox": {
+        "width": 1.0,
+        "height": 1.0
+    },
+    "names": [
+        "§d§lPokeStop§r"
+    ],
+    "interaction": {
+        "type": "custom_script",
+        "script": "q.run_script(q.npc.config.interactable_script);"
+    },
+    "ai": [
+        {
+            "type": "apply_behaviours",
+            "behaviours": [
+                "cobblemon:looks_in_one_direction",
+                "cobblemon:name_tag",
+                "cobblemon:base_interactable"
+            ]
+        }
+    ]
+}

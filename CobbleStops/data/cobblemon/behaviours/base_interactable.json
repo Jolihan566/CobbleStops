@@ -1,0 +1,42 @@
+{
+    "name": "Base Interactable",
+    "description": "This is to make interactables work with variables.",
+    "entityType": "cobblemon:npc",
+    "undo": [
+    ],
+    "configurations": [
+        {
+            "type": "add_variables",
+            "variables": [
+                {
+                    "variableName": "node_health",
+                    "displayName": "PokeStop Health",
+                    "description": "The amount of times the user must click to trigger the interaction.",
+                    "type": "NUMBER",
+                    "defaultValue": "1"
+                },
+                {
+                    "variableName": "node_cooldown",
+                    "displayName": "PokeStop Cooldown",
+                    "description": "The cooldown of the PokeStop in hours",
+                    "type": "NUMBER",
+                    "defaultValue": "1"
+                },
+                {
+                    "variableName": "reward_pool",
+                    "displayName": "Reward Pool Script",
+                    "description": "The script used to determine the reward pool",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:pokestop_reward"
+                },
+                {
+                    "variableName": "interactable_script",
+                    "displayName": "Interactable Script",
+                    "description": "The script used to determine the type of interactable",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:node"
+                }
+            ]
+        }
+    ]
+}

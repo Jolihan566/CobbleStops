@@ -15,7 +15,7 @@
     ],
     "interaction": {
         "type": "custom_script",
-        "script": "q.run_script(q.npc.config.interactable_script);"
+        "script": "q.run_script('cobblemon:pokestop');"
     },
     "ai": [
         {
@@ -23,7 +23,8 @@
             "behaviours": [
                 "cobblemon:looks_in_one_direction",
                 "cobblemon:name_tag",
-                "cobblemon:base_interactable"
+                "cobblemon:base_interactable",
+                "cobbblemon:loot_pool"
             ]
         }
     ]

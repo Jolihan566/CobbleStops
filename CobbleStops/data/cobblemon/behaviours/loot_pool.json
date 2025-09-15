@@ -1,0 +1,140 @@
+{
+    "name": "Loot Pool",
+    "description": "Loot Pool Variables for Pokestops.",
+    "entityType": "cobblemon:npc",
+    "undo": [
+    ],
+    "configurations": [
+        {
+            "type": "add_variables",
+            "variables": [
+                {
+                    "variableName": "common_item_1",
+                    "displayName": "§aCommon Item 1",
+                    "description": "The item ID for item 1 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:pokeball"
+                },
+                {
+                    "variableName": "common_item_2",
+                    "displayName": "§aCommon Item 2",
+                    "description": "The item ID for item 2 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:great_ball"
+                },
+                {
+                    "variableName": "common_item_3",
+                    "displayName": "§aCommon Item 3",
+                    "description": "The item ID for item 3 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "common_item_4",
+                    "displayName": "§aCommon Item 4",
+                    "description": "The item ID for item 4 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "common_item_5",
+                    "displayName": "§aCommon Item 5",
+                    "description": "The item ID for item 5 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "common_item_6",
+                    "displayName": "§aCommon Item 6",
+                    "description": "The item ID for item 3 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "uncommon_item_1",
+                    "displayName": "§bUncommon Item 1",
+                    "description": "The item ID for item 1 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:pokeball"
+                },
+                {
+                    "variableName": "uncommon_item_2",
+                    "displayName": "§bUncommon Item 2",
+                    "description": "The item ID for item 2 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:great_ball"
+                },
+                {
+                    "variableName": "uncommon_item_3",
+                    "displayName": "§bUncommon Item 3",
+                    "description": "The item ID for item 3 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "uncommon_item_4",
+                    "displayName": "§bUncommon Item 4",
+                    "description": "The item ID for item 4 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "uncommon_item_5",
+                    "displayName": "§bUncommon Item 5",
+                    "description": "The item ID for item 5 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "rare_item_1",
+                    "displayName": "§dRare Item 1",
+                    "description": "The item ID for item 1 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:pokeball"
+                },
+                {
+                    "variableName": "rare_item_2",
+                    "displayName": "§dRare Item 2",
+                    "description": "The item ID for item 2 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:great_ball"
+                },
+                {
+                    "variableName": "rare_item_3",
+                    "displayName": "§dRare Item 3",
+                    "description": "The item ID for item 3 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "rare_item_4",
+                    "displayName": "§drare Item 4",
+                    "description": "The item ID for item 4 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                },
+                {
+                    "variableName": "ultra_rare_item_1",
+                    "displayName": "§6Ultra Rare Item 1",
+                    "description": "The item ID for item 1 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:pokeball"
+                },
+                {
+                    "variableName": "ultra_rare_item_2",
+                    "displayName": "§6Ultra Rare Item 2",
+                    "description": "The item ID for item 2 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:great_ball"
+                },
+                {
+                    "variableName": "ultra_rare_item_3",
+                    "displayName": "§6Ultra Rare Item 3",
+                    "description": "The item ID for item 3 to be given to the player (e.g. cobblemon:pokeball)",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:master_ball"
+                }
+            ]
+        }
+    ]
+}

@@ -1,53 +1,77 @@
+
+t.common_pool = q.array(
+    q.npc.config.common_item_1,
+    q.npc.config.common_item_2,
+    q.npc.config.common_item_3,
+    q.npc.config.common_item_4,
+    q.npc.config.common_item_5,
+    q.npc.config.common_item_6
+);
+
+t.uncommon_pool = q.array(
+    q.npc.config.uncommon_item_1,
+    q.npc.config.uncommon_item_2,
+    q.npc.config.uncommon_item_3,
+    q.npc.config.uncommon_item_4,
+    q.npc.config.uncommon_item_5
+);
+
+t.rare_pool = q.array(
+    q.npc.config.rare_item_1,
+    q.npc.config.rare_item_2,
+    q.npc.config.rare_item_3,
+    q.npc.config.rare_item_4
+);
+
+t.ultra_rare_pool = q.array(
+    q.npc.config.ultra_rare_item_1,
+    q.npc.config.ultra_rare_item_2,
+    q.npc.config.ultra_rare_item_3
+);
+
 t.roll = math.random_integer(1, 100);
 
-t.roll <= 15 && t.roll >= 1 ? {
-    q.run_command('give ' + q.player.username + ' ' + q.npc.config.common_item_1 + ' 1');
-    q.player.tell('§aYou have claimed the PokeStop! You found §a1x ' + q.npc.config.common_item_1_name + '§a!');
+(t.roll <= 60) ? {
+    t.index = math.random_integer(0, 5);
+    t.item_id = t.common_pool[t.index];
+    t.item_string_array = q.split_string(t.item_id, ':');
+    t.item_name = t.item_string_array[1];
+
+    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
+    q.player.tell('§aYou have claimed the PokeStop! You found §a1x ' + t.item_name + '§a!');
     return 1;
 };
 
-t.roll <= 45 && t.roll > 15 ? {
-    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 1');
-    q.player.tell('§aYou have mined the node! You found §d1x Iron Ingot§a!');
+(t.roll > 60 && t.roll <= 85) ? {
+    t.index = math.random_integer(0, 4);
+    t.item_id = t.uncommon_pool[t.index];
+    t.item_string_array = q.split_string(t.item_id, ':');
+    t.item_name = t.item_string_array[1];
+
+    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
+    q.player.tell('§aYou have claimed the PokeStop! You found §b1x ' + t.item_name + '§a!');
     return 1;
 };
 
-t.roll <= 60 && t.roll > 45 ? {
-    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 1');
-    q.player.tell('§aYou have mined the node! You found §d2x Iron Ingots§a!');
+(t.roll > 85 && t.roll <= 95) ? {
+    t.index = math.random_integer(0, 3);
+    t.item_id = t.rare_pool[t.index];
+    t.item_string_array = q.split_string(t.item_id, ':');
+    t.item_name = t.item_string_array[1];
+
+    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
+    q.player.tell('§aYou have claimed the PokeStop! You found §d1x ' + t.item_name + '§a!');
     return 1;
 };
 
-t.roll <= 65 && t.roll > 60 ? {
-    q.run_command('give ' + q.player.username + ' minecraft:iron_ingot 1');
-    q.player.tell('§aYou have mined the node! You found §d3x Iron Ingots§a!');
-    return 1;
-};
+(t.roll > 95) ? {
+    t.index = math.random_integer(0, 2);
+    t.item_id = t.ultra_rare_pool[t.index];
+    t.item_string_array = q.split_string(t.item_id, ':');
+    t.item_name = t.item_string_array[1];
 
-t.pokelevel1 = math.random_integer(5, 10);
-t.pokelevel2 = math.random_integer(5, 10);
-t.pokelevel3 = math.random_integer(5, 10);
-
-t.roll <= 85 && t.roll > 65 ? {
-    q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' geodude lvl=' + t.pokelevel1);
-    q.player.tell('§aYou have mined the node! A wild §dGeodude§a appeared!');
-    return 1;
-};
-
-t.roll <= 95 && t.roll > 85 ? {
-    q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' aron lvl=' + t.pokelevel2);
-    q.player.tell('§aYou have mined the node! A wild §dAron§a appeared!');
-    return 1;
-};
-
-t.roll <= 99 && t.roll > 95 ? {
-    q.player.tell('§cYou found nothing!');
-    return 1;
-};
-
-t.roll == 100 ? {
-    q.run_command('pokespawnat ' + q.player.x + ' ' + q.player.y + ' ' + q.player.z + ' beldum lvl=' + t.pokelevel3);
-    q.player.tell('§aYou have mined the node! A wild §dBeldum§a appeared!');
+    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
+    q.player.tell('§aYou have claimed the PokeStop! You found §61x ' + t.item_name + '§a!');
     return 1;
 };
 

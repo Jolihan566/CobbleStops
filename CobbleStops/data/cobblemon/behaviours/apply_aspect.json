@@ -1,0 +1,24 @@
+{
+    "name": "Apply Aspect",
+    "description": "Applies the aspect to the npc automatically.",
+    "entityType": "cobblemon:npc",
+    "undo": [
+    ],
+    "configurations": [
+        {
+            "type": "script",
+            "variables": [
+                {
+                    "variableName": "aspect_name",
+                    "displayName": "PokeStop Model",
+                    "description": "Change the model of the PokeStop. Choose from model1, model2, gray, green, purple, red, blue, yellow.",
+                    "type": "TEXT",
+                    "defaultValue": "model1"
+                }
+            ],
+            "script": [
+                "q.npc.add_aspect(q.entity.config.aspect_name);"
+            ]
+        }
+    ]
+}

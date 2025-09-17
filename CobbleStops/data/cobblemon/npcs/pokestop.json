@@ -24,7 +24,8 @@
                 "cobblemon:looks_in_one_direction",
                 "cobblemon:name_tag",
                 "cobblemon:base_interactable",
-                "cobblemon:loot_pool"
+                "cobblemon:loot_pool",
+                "cobblemon:apply_aspect"
             ]
         }
     ]

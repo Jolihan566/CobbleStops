@@ -64,7 +64,7 @@ Make sure you are in Creative Mode or have admin permissions.
 
 Use ``/npcedit`` on the PokeStop NPC to open the NPC Editor.
 
-Find the "Cooldown" setting in top the editor.
+Find the "Cooldown" setting in the top the editor.
 
 Change the value to your desired wait time (in hours).
 

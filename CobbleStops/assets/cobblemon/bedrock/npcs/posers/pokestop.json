@@ -11,7 +11,7 @@
     "standing": {
       "poseTypes": ["STAND", "WALK", "FLOAT", "SWIM", "PORTRAIT", "PROFILE"],
       "animations": [
-        "q.bedrock('pokestop', 'idle_closed')"
+        "q.bedrock('model1', 'idle_closed')"
       ]
     }
   }

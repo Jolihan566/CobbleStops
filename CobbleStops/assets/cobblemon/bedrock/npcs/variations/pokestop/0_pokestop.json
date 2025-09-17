@@ -3,95 +3,11 @@
   "order": 0,
   "variations": [
     {
-      "aspects": ["model1"],
+      "aspects": [],
       "poser": "cobblemon:pokestop",
       "model": "cobblemon:pokestop.geo",
       "texture": "cobblemon:textures/npcs/pokestop/pokestop.png",
       "layers": []
-    },
-    {
-      "aspects": ["model2"],
-      "poser": "cobblemon:pokestop2",
-      "model": "cobblemon:pokestop2.geo",
-      "texture": "cobblemon:textures/npcs/pokestop/pokestop2.png",
-      "layers": [
-        {
-        "name": "pokestop_e",
-        "texture": "cobblemon:textures/npcs/pokestop/pokestop_e.png",
-        "emissive": true,
-        "translucent": false
-      }
-      ]
-      },
-      {
-      "aspects": ["gray"],
-      "poser": "cobblemon:pokestop2",
-      "model": "cobblemon:pokestop2.geo",
-      "texture": "cobblemon:textures/npcs/pokestop/pokestop_gray.png",
-      "layers": [
-        {
-          "name": "gray_e",
-          "texture": "cobblemon:textures/npcs/pokestop/pokestop_gray_e.png",
-          "emissive": true,
-          "translucent": false
-        }
-      ]
-      },
-          {
-      "aspects": ["green"],
-      "poser": "cobblemon:pokestop2",
-      "model": "cobblemon:pokestop2.geo",
-      "texture": "cobblemon:textures/npcs/pokestop/pokestop_green.png",
-      "layers": [
-        {
-          "name": "green_e",
-          "texture": "cobblemon:textures/npcs/pokestop/pokestop_green_e.png",
-          "emissive": true,
-          "translucent": false
-        }
-      ]
-    },
-          {
-      "aspects": ["purple"],
-      "poser": "cobblemon:pokestop2",
-      "model": "cobblemon:pokestop2.geo",
-      "texture": "cobblemon:textures/npcs/pokestop/pokestop_purple.png",
-      "layers": [
-        {
-          "name": "purple_e",
-          "texture": "cobblemon:textures/npcs/pokestop/pokestop_purple_e.png",
-          "emissive": true,
-          "translucent": false
-        }
-      ]
-    },
-          {
-      "aspects": ["red"],
-      "poser": "cobblemon:pokestop2",
-      "model": "cobblemon:pokestop2.geo",
-      "texture": "cobblemon:textures/npcs/pokestop/pokestop_red.png",
-      "layers": [
-        {
-          "name": "red_e",
-          "texture": "cobblemon:textures/npcs/pokestop/pokestop_red_e.png",
-          "emissive": true,
-          "translucent": false
-        }
-      ]
-    },
-      {
-      "aspects": ["yellow"],
-      "poser": "cobblemon:pokestop2",
-      "model": "cobblemon:pokestop2.geo",
-      "texture": "cobblemon:textures/npcs/pokestop/pokestop_yellow.png",
-      "layers": [
-        {
-          "name": "yellow_e",
-          "texture": "cobblemon:textures/npcs/pokestop/pokestop_yellow_e.png",
-          "emissive": true,
-          "translucent": false
-        }
-      ]
     }
   ]
 }

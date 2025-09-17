@@ -1,0 +1,17 @@
+{
+  "portraitScale": 2.3,
+  "portraitTranslation": [0.0, 1.1, 0.0],
+  "profileScale": 1.0,
+  "profileTranslation": [0.0, -0.5, 0.0],
+  "animations": {
+    "ground_idle": "q.bedrock_primary('pokestop2', 'ground_idle', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "WALK", "FLOAT", "SWIM", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('pokestop2', 'ground_idle')"
+      ]
+    }
+  }
+}

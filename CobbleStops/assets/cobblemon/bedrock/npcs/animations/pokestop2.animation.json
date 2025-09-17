@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pokestop.ground_idle": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [0, "math.sin(q.anim_time*90)", 0]
+				},
+				"outsideball_ring": {
+					"rotation": [0, "math.round(q.anim_time*-60)", 0]
+				},
+				"mid": {
+					"rotation": [0, "math.round(q.anim_time*-60)", 0]
+				}
+			}
+		}
+	}
+}

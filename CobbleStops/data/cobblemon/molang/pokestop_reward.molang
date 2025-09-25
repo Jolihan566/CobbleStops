@@ -45,7 +45,7 @@ t.item_amount = 1;
     t.rarity_color_code = '§6';
 };
 
-t.item_pool != 0 || t.rarity_color_code != 0 ? {
+t.item_pool != 0 && t.rarity_color_code != 0 ? {
     t.max_index = (q.length(t.item_pool) - 1);
     t.index = math.random_integer(0, t.max_index);
     t.item_id = t.item_pool[t.index];

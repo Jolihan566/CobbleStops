@@ -1,78 +1,62 @@
-
-t.common_pool = q.array(
-    q.npc.config.common_item_1,
-    q.npc.config.common_item_2,
-    q.npc.config.common_item_3,
-    q.npc.config.common_item_4,
-    q.npc.config.common_item_5,
-    q.npc.config.common_item_6
-);
-
-t.uncommon_pool = q.array(
-    q.npc.config.uncommon_item_1,
-    q.npc.config.uncommon_item_2,
-    q.npc.config.uncommon_item_3,
-    q.npc.config.uncommon_item_4,
-    q.npc.config.uncommon_item_5
-);
-
-t.rare_pool = q.array(
-    q.npc.config.rare_item_1,
-    q.npc.config.rare_item_2,
-    q.npc.config.rare_item_3,
-    q.npc.config.rare_item_4
-);
-
-t.ultra_rare_pool = q.array(
-    q.npc.config.ultra_rare_item_1,
-    q.npc.config.ultra_rare_item_2,
-    q.npc.config.ultra_rare_item_3
-);
-
 t.roll = math.random_integer(1, 100);
+t.item_pool = 0;
+t.rarity_color_code = 0;
+t.item_amount = 1;
 
-(t.roll <= 60) ? {
-    t.index = math.random_integer(0, 5);
-    t.item_id = t.common_pool[t.index];
-    t.item_string_array = q.split_string(t.item_id, ':');
-    t.item_name = t.item_string_array[1];
-
-    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
-    q.player.tell('§aYou have claimed the PokeStop! You found §a1x ' + t.item_name + '§a!');
-    return 1;
+(t.roll <= 60 && t.roll != 0) ? {
+    t.item_pool = q.array(
+        q.npc.config.common_item_1,
+        q.npc.config.common_item_2,
+        q.npc.config.common_item_3,
+        q.npc.config.common_item_4,
+        q.npc.config.common_item_5,
+        q.npc.config.common_item_6
+    );
+    t.rarity_color_code = '§a';
 };
 
 (t.roll > 60 && t.roll <= 85) ? {
-    t.index = math.random_integer(0, 4);
-    t.item_id = t.uncommon_pool[t.index];
-    t.item_string_array = q.split_string(t.item_id, ':');
-    t.item_name = t.item_string_array[1];
-
-    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
-    q.player.tell('§aYou have claimed the PokeStop! You found §b1x ' + t.item_name + '§a!');
-    return 1;
+    t.item_pool = q.array(
+        q.npc.config.uncommon_item_1,
+        q.npc.config.uncommon_item_2,
+        q.npc.config.uncommon_item_3,
+        q.npc.config.uncommon_item_4,
+        q.npc.config.uncommon_item_5
+    );
+    t.rarity_color_code = '§b';
 };
 
 (t.roll > 85 && t.roll <= 95) ? {
-    t.index = math.random_integer(0, 3);
-    t.item_id = t.rare_pool[t.index];
-    t.item_string_array = q.split_string(t.item_id, ':');
-    t.item_name = t.item_string_array[1];
-
-    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
-    q.player.tell('§aYou have claimed the PokeStop! You found §d1x ' + t.item_name + '§a!');
-    return 1;
+    t.item_pool = q.array(
+        q.npc.config.rare_item_1,
+        q.npc.config.rare_item_2,
+        q.npc.config.rare_item_3,
+        q.npc.config.rare_item_4
+    );
+    t.rarity_color_code = '§d';
 };
 
 (t.roll > 95) ? {
-    t.index = math.random_integer(0, 2);
-    t.item_id = t.ultra_rare_pool[t.index];
+    t.item_pool = q.array(
+        q.npc.config.ultra_rare_item_1,
+        q.npc.config.ultra_rare_item_2,
+        q.npc.config.ultra_rare_item_3
+    );
+    t.rarity_color_code = '§6';
+};
+
+t.item_pool != 0 || t.rarity_color_code != 0 ? {
+    t.max_index = (q.length(t.item_pool) - 1);
+    t.index = math.random_integer(0, t.max_index);
+    t.item_id = t.item_pool[t.index];
     t.item_string_array = q.split_string(t.item_id, ':');
     t.item_name = t.item_string_array[1];
-
-    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' 1');
-    q.player.tell('§aYou have claimed the PokeStop! You found §61x ' + t.item_name + '§a!');
+    
+    q.player.tell('§aYou have claimed the PokeStop! You found ' + t.rarity_color_code + 'x' + t.item_amount + ' ' + t.item_name + '§a!');
+    q.run_command('give ' + q.player.username + ' ' + t.item_id + ' ' + t.item_amount);
+    
     return 1;
 };
 
+q.player.tell('§cThere was an error while claiming this PokeStop.');
 return 0;
